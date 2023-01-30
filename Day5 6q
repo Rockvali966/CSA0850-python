@@ -1,0 +1,25 @@
+from math import factorial
+n = int(input("Enter the number of rows:"))
+j = int(input("Enter line number:"))
+for i in range(n):
+	for j in range(n-i+1):
+		print(end=" ")
+	for j in range(i+1):
+		print(factorial(i)//(factorial(j)*factorial(i-j)), end=" ")
+	print()
+
+def pascal(n):
+    if n == 1:
+        return [1]
+    else:
+        line = [1]
+        previous_line = pascal(n - 1)
+        for i in range(len(previous_line) - 1):
+            line.append(previous_line[i] + previous_line[i + 1])
+        line += [1]
+    return line
+
+total = 0
+for ele in range(0, len(pascal(j))):
+    total = total + pascal(j)[ele]
+print("Sum of elements in",j,"th row:",total)
