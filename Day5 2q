@@ -1,0 +1,34 @@
+a = input("Enter the grade of the employee: ")
+b = input("Enter the employee salary: ")
+if a == 'A':
+    b = int(b)
+    if b < 10000 and b >=0 :
+        bonus = b*7*0.01
+        total = bonus + b
+        print("Salary=", b)
+        print("Bonus=", bonus)
+        print("Total to be paid:", total)
+    else:
+        bonus = int(b) * 5 * 0.01
+        total = bonus + int(b)
+        print("Salary=", b)
+        print("Bonus=", bonus)
+        print("Total to be paid:", total)
+elif a == 'B':
+    b = int(b)
+    if  b < 10000 and b>=0  :
+        bonus = b * 7 * 0.01
+        total = bonus + b
+        print("Salary=", b)
+        print("Bonus=", bonus)
+        print("Total to be paid:", total)
+    elif b > 10000 and b>=0:
+        bonus = b * 10 * 0.01
+        total = bonus + b
+        print("Salary=", b)
+        print("Bonus=", bonus)
+        print("Total to be paid:", total)
+    else:
+        print("Enter valid salary")
+else:
+    print("INVALID! Enter Grade either 'A' or 'B'")
