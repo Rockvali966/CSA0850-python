@@ -1,0 +1,15 @@
+def word_length(s):
+    val = 0
+
+    a = s.strip()
+
+    for i in range(len(a)):
+        if a[i] == " ":
+            val = 0
+        else:
+            val += 1
+    return val
+
+
+s = input(">")
+print(word_length(s))
