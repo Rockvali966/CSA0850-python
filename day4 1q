@@ -1,7 +1,20 @@
-
-def last_word_length(s):
-    words = s.strip().split(" ")
-    return len(words[-1])
-
-s = input("enter the word :")
-print(last_word_length(s))
+n=int(input("enter="))
+for fizzbuzz in range(1,n+1):
+ 
+    if fizzbuzz % 15 == 0:
+        print("FizzBuzz")                                        
+        continue
+ 
+    elif fizzbuzz % 3 == 0:    
+        print("Fizz")                                        
+        continue
+ 
+    elif fizzbuzz % 5 == 0:        
+        print("Buzz")                                    
+        continue
+ 
+    print(fizzbuzz, end= ' ')
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
